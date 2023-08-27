@@ -48,3 +48,17 @@
 		{/if}
 	</picture>
 {/if}
+
+<style lang="scss">
+	picture {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+	img {
+		display: block;
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+</style>
