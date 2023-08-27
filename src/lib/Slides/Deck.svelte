@@ -36,7 +36,7 @@
 	<div class="deck">
 		<slot />
 	</div>
-	<button class="prev" on:keypress={handlePrev} on:click={handlePrev} style="width:25%">
+	<div class="prev" on:keypress={handlePrev} on:click={handlePrev} style="width:25%">
 		<svg xmlns="http://www.w3.org/2000/svg" width="60" height="120" viewBox="0 0 24 24"
 			><g transform="rotate(180 12 12)"
 				><g id="evaArrowIosForwardFill0"
@@ -50,8 +50,8 @@
 				></g
 			></svg
 		>
-	</button>
-	<button class="next" on:keypress={handleNext} on:click={handleNext} style="width:25%">
+	</div>
+	<div class="next" on:keypress={handleNext} on:click={handleNext} style="width:25%">
 		<svg xmlns="http://www.w3.org/2000/svg" width="60" height="120" viewBox="0 0 24 24"
 			><g id="evaArrowIosForwardFill0"
 				><g id="evaArrowIosForwardFill1"
@@ -63,7 +63,7 @@
 				></g
 			></svg
 		>
-	</button>
+	</div>
 </div>
 
 <style lang="scss">
