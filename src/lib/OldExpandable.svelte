@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { expandable } from './actions/expandable';
+	import { expandable } from './actions/expandable.js';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	export let expanded = false;
