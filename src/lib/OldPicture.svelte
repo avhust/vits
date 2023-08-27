@@ -1,4 +1,5 @@
 <script lang="ts">
+	export let cdn = '';
 	export let path: string = '/i';
 	export let image: string = '';
 	export let alt = 'placeholder';
@@ -16,28 +17,28 @@
 		{#if x2}
 			<source
 				type="image/avif"
-				srcset="{path}/avif/{name}-1x.avif 1x, {path}/avif/{name}.avif 2x"
+				srcset="{cdn}{path}/avif/{name}-1x.avif 1x, {cdn}{path}/avif/{name}.avif 2x"
 			/>
 			<source
 				type="image/webp"
-				srcset="{path}/webp/{name}-1x.webp 1x, {path}/webp/{name}.webp 2x"
+				srcset="{cdn}{path}/webp/{name}-1x.webp 1x, {cdn}{path}/webp/{name}.webp 2x"
 			/>
 			<img
 				{alt}
-				src="{path}/{format}/{name}.{format}"
-				srcset="{path}/{format}/{name}-1x.{format} 1x, {path}/{format}/{name}.{format} 2x"
+				src="{cdn}{path}/{format}/{name}.{format}"
+				srcset="{cdn}{path}/{format}/{name}-1x.{format} 1x, {cdn}{path}/{format}/{name}.{format} 2x"
 				{height}
 				{width}
 				{loading}
 				decoding="async"
 			/>
 		{:else}
-			<source type="image/avif" srcset="{path}/avif/{name}.avif" />
-			<source type="image/webp" srcset="{path}/webp/{name}.webp" />
+			<source type="image/avif" srcset="{cdn}{path}/avif/{name}.avif" />
+			<source type="image/webp" srcset="{cdn}{path}/webp/{name}.webp" />
 			<img
 				{alt}
-				src="{path}/{format}/{name}.{format}"
-				srcset="{path}/{format}/{name}.{format}"
+				src="{cdn}{path}/{format}/{name}.{format}"
+				srcset="{cdn}{path}/{format}/{name}.{format}"
 				{height}
 				{width}
 				{loading}
